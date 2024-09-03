@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "vite": "^5.4.2",
+    "vite-plugin-typo3": "^1.0.0"
+  }
+}

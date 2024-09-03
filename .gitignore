@@ -5,6 +5,7 @@ nbproject
 !/var/labels
 /vendor
 /public/*
+/node_modules
 !/public/.htaccess
 !/public/typo3conf
 /public/typo3conf/*
