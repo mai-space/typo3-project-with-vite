@@ -1,0 +1,18 @@
+# --- BEGIN: BackendLayout Standard ------------------------------------------------------------------------------------
+
+mod {
+    web_layout {
+        BackendLayouts {
+            Landingpage {
+                title = Landingpage
+                # icon equals EXT:altertations/Resources/Public/Images/BackendLayouts/default.png
+                config {
+                    backend_layout {
+                        colCount = 0
+                        rowCount = 0
+                    }
+                }
+            }
+        }
+    }
+}

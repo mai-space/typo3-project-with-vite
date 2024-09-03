@@ -1,0 +1,3 @@
+# --- BEGIN: Mod files -------------------------------------------------------------------------------------------------
+
+@import 'EXT:alterations/Configuration/TsConfig/Page/Mod/mod.tsconfig'

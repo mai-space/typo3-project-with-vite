@@ -1,0 +1,7 @@
+pids {
+    default {
+        home = 1
+        meta = 3
+        privacy = 6
+    }
+}

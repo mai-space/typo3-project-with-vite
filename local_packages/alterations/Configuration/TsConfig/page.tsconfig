@@ -1,0 +1,6 @@
+# --- BEGIN: Include Page TsConfig -------------------------------------------------------------------------------------
+
+@import 'EXT:alterations/Configuration/TsConfig/Page/mod.tsconfig'
+@import 'EXT:alterations/Configuration/TsConfig/Page/rte.tsconfig'
+@import 'EXT:alterations/Configuration/TsConfig/Page/tce-form.tsconfig'
+@import 'EXT:alterations/Configuration/TsConfig/Page/tce-main.tsconfig'

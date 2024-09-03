@@ -1,0 +1,20 @@
+module {
+    tx_backend {
+        view {
+            templateRootPaths.1686404315 = {$fluid.backend.templateRootPath}
+            layoutRootPaths.1686404315 = {$fluid.backend.layoutRootPath}
+            partialRootPaths.1686404315 = {$fluid.backend.partialRootPath}
+        }
+    }
+}
+
+plugin {
+    tx_backend {
+        view {
+            templateRootPaths.1686404315 = {$fluid.backend.templateRootPath}
+            layoutRootPaths.1686404315 = {$fluid.backend.layoutRootPath}
+            partialRootPaths.1686404315 = {$fluid.backend.partialRootPath}
+        }
+    }
+}
+

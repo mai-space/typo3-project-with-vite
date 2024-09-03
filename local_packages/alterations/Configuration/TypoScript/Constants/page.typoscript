@@ -1,0 +1,42 @@
+page {
+    baseUrl = https://maispace.de/
+    alternateLanguageUrl = https://maispace.de/en/
+    brand = Maispace
+    title = Maispace
+    titleSeparator = -
+    copyright = © 2023 by Joel Maximilian Mai
+    description = Web Development with MaiSpace
+    keywords = Web Development, Web Design, TYPO3, MaiSpace, Joel Maximilian Mai,
+    author = Joel Maximilian Mai
+    date = 2023-06-03
+    lastModified = 2023-06-03
+
+    ogImage = EXT:alterations/Resources/Public/Backend/Login/logo.png
+
+    twitterCreator = @MaispaceDe
+}
+
+meta {
+    themeColor = #44475A
+    tileColor = #6272A4
+    buttonColor = #FFB86C
+
+    favicon {
+        svg = EXT:alterations/Resources/Public/Images/favicon.svg
+        ico = EXT:alterations/Resources/Public/Backend/Login/favicon.ico
+        png {
+            16 = EXT:alterations/Resources/Public/Images/favicon-16x16.png
+            32 = EXT:alterations/Resources/Public/Images/favicon-32x32.png
+            180 = EXT:alterations/Resources/Public/Images/apple-touch-icon.png
+        }
+    }
+
+    manifest = /manifest.json
+}
+
+[applicationContext == "Development/*"]
+    page {
+        baseUrl = https://website-maispace.ddev.site/
+        alternateLanguageUrl = https://website-maispace.ddev.site/en/
+    }
+[END]

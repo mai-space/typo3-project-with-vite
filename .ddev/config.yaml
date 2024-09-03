@@ -1,0 +1,27 @@
+# Name of the Project
+name: typo3-with-vite
+# DDEV Options
+xdebug_enabled: false
+use_dns_when_possible: true
+router_http_port: '80'
+router_https_port: '443'
+# Versions of Software
+composer_version: "2"
+php_version: "8.3"
+nodejs_version: "22"
+database:
+    type: mysql
+    version: "8.0"
+# Extra Packages
+webimage_extra_packages: [ graphicsmagick, webp ]
+# Server Options
+webserver_type: apache-fpm
+type: typo3
+docroot: public
+# Server Environment
+web_environment:
+  - TYPO3_CONTEXT=Development/Ddev
+additional_fqdns: []
+additional_hostnames: []
+corepack_enable: false
+# Developer Quality of Life Options

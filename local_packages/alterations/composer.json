@@ -1,0 +1,24 @@
+{
+    "name": "maispace/alterations",
+    "type": "typo3-cms-extension",
+    "description": "Client specific alterations",
+    "homepage": "https://www.maispace.de",
+    "authors": [{
+        "name": "Joel Maximilian Mai",
+        "email": "joel@maispace.de",
+        "role": "Lead Developer"
+    }],
+    "autoload": {
+        "psr-4": {
+            "Maispace\\Alterations\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "alterations"
+        },
+        "branch-alias": {
+            "dev-main": "12.0.x-dev"
+        }
+    }
+}

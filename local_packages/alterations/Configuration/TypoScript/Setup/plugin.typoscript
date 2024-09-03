@@ -1,0 +1,23 @@
+plugin {
+    tx_alterations {
+        view {
+            layoutRootPaths.10 = {$fluid.elements.layoutRootPath}
+            templateRootPaths.10 = {$fluid.elements.templateRootPath}
+            partialRootPaths.10 = {$fluid.elements.partialRootPath}
+        }
+
+        persistence {
+
+        }
+
+        settings {
+            baseUrl = {$page.baseUrl}
+
+            pids {
+                home = {$pids.default.home}
+                meta = {$pids.default.meta}
+                privacy = {$pids.default.privacy}
+            }
+        }
+    }
+}

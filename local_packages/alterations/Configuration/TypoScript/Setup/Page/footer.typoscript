@@ -1,0 +1,19 @@
+page {
+    footerData {
+        #10 equals TEXT
+        #10.value equals <script type="text/javascript" src="YOUR TRACKING CODE"></script>
+    }
+
+    includeJSFooterlibs {
+        #vendor equals EXT:alterations/Resources/Public/JavaScript/vendor/someLib.js
+    }
+
+    includeJSFooter {
+        #deferredScript equals EXT:alterations/Resources/Public/JavaScript/deferredScript.js
+    }
+
+    jsFooterInline {
+        #10 equals TEXT
+        #10.value equals <script type="text/javascript">alert('Hello World!');</script>
+    }
+}

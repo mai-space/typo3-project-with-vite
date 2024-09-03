@@ -1,0 +1,4 @@
+# --- BEGIN: TCEFORM ---------------------------------------------------------------------------------------------------
+
+@import 'EXT:alterations/Configuration/TsConfig/Page/TCEFORM/pages.tsconfig'
+@import 'EXT:alterations/Configuration/TsConfig/Page/TCEFORM/tt_content.tsconfig'

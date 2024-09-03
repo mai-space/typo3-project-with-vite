@@ -1,0 +1,4 @@
+# --- BEGIN: Include Wizards -------------------------------------------------------------------------------------------
+
+@import 'EXT:alterations/Configuration/TsConfig/Page/Mod/Wizards/NewContentElement/*.tsconfig'
+@import 'EXT:alterations/Configuration/TsConfig/Page/Mod/Wizards/NewRecord/*.tsconfig'

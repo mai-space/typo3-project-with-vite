@@ -1,0 +1,51 @@
+base: 'https://www.typo3-with-vite.de/'
+baseVariants:
+  -
+    base: 'https://www.typo3-with-vite.de/'
+    condition: 'applicationContext == "Production/Mittwald"'
+  -
+    base: 'https://www.typo3-with-vite.dev/'
+    condition: 'applicationContext == "Development/Mittwald"'
+  -
+    base: 'https://typo3-with-vite.ddev.site/'
+    condition: 'applicationContext == "Development/Ddev"'
+errorHandling:
+  -
+    errorCode: 404
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=17'
+  -
+    errorCode: 403
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=19'
+  -
+    errorCode: 500
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=20'
+  -
+    errorCode: 503
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=21'
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    languageId: 0
+    base: /
+    locale: de_DE
+    navigationTitle: Deutsch
+    flag: de
+    websiteTitle: 'typo3-with-vite'
+  -
+    title: English
+    enabled: true
+    locale: en_US
+    base: /en
+    websiteTitle: 'typo3-with-vite'
+    navigationTitle: English
+    fallbackType: strict
+    fallbacks: '0'
+    flag: en-us-gb
+    languageId: 1
+rootPageId: 1
+websiteTitle: 'typo3-with-vite'

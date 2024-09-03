@@ -1,0 +1,29 @@
+module {
+    tx_alterations {
+        settings < plugin.tx_alterations.settings
+
+        view {
+            layoutRootPaths {
+                5 = {$fluid.pages.partialRootPath}
+                10 = {$fluid.backend.layoutRootPath}
+            }
+
+            templateRootPaths {
+                5 = {$fluid.pages.partialRootPath}
+                10 = {$fluid.backend.templateRootPath}
+            }
+
+            partialRootPaths {
+                5 = {$fluid.pages.partialRootPath}
+                10 = {$fluid.backend.partialRootPath}
+            }
+        }
+    }
+    tx_backend {
+        view {
+            layoutRootPaths.100 = {$fluid.backend.layoutRootPath}
+            templateRootPaths.100 = {$fluid.backend.templateRootPath}
+            partialRootPaths.100 = {$fluid.backend.partialRootPath}
+        }
+    }
+}

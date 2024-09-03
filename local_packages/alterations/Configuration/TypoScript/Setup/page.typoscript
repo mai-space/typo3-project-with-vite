@@ -1,0 +1,12 @@
+page = PAGE
+page {
+    typeNum = 0
+
+    config < config
+
+    10 =< lib.templates.base.10
+}
+
+@import 'EXT:alterations/Configuration/TypoScript/Setup/Page/head.typoscript'
+@import 'EXT:alterations/Configuration/TypoScript/Setup/Page/body.typoscript'
+@import 'EXT:alterations/Configuration/TypoScript/Setup/Page/footer.typoscript'

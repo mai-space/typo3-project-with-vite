@@ -1,0 +1,14 @@
+# --- BEGIN: Dependencies ----------------------------------------------------------------------------------------------
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:min/Configuration/TypoScript/setup.typoscript'
+
+# --- BEGIN: MaiSpace Dependencies -------------------------------------------------------------------------------------
+
+
+# --- BEGIN: Client specific alterations -------------------------------------------------------------------------------
+@import 'EXT:alterations/Configuration/TypoScript/Setup/plugin.typoscript'
+@import 'EXT:alterations/Configuration/TypoScript/Setup/module.typoscript'
+@import 'EXT:alterations/Configuration/TypoScript/Setup/config.typoscript'
+@import 'EXT:alterations/Configuration/TypoScript/Setup/lib.typoscript'
+@import 'EXT:alterations/Configuration/TypoScript/Setup/page.typoscript'
+@import 'EXT:alterations/Configuration/TypoScript/Setup/backend.typoscript'

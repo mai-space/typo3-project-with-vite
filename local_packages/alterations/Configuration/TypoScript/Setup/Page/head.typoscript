@@ -1,0 +1,199 @@
+page {
+    headTag = <head itemscope itemtype="http://schema.org/WebSite">
+
+    meta {
+        X-UA-Compatible = IE=edge
+        X-UA-Compatible.attribute = http-equiv
+        viewport = width=device-width, initial-scale=1.0
+        imagetoolbar = false
+
+        # Page
+        language = de
+        robots = index, follow
+        copyright = {$page.copyright}
+        author {
+            field = author
+            replace = 1
+            ifEmpty.data = {$page.author}
+        }
+        description {
+            field = description // abstract
+            replace = 1
+            ifEmpty.data = {$page.description}
+        }
+        keywords {
+            field = keywords
+            replace = 1
+            ifEmpty.data = {$page.keywords}
+        }
+        date {
+            stdWrap.cObject = TEXT
+            stdWrap.cObject {
+                data = field:crdate
+                strftime = %Y-%m-%d
+                wrap = |
+                ifEmpty.data = {$page.date}
+            }
+        }
+        lastModified {
+            stdWrap.cObject = TEXT
+            stdWrap.cObject {
+                data = field:tstamp
+                strftime = %Y-%m-%d
+                wrap = |
+                ifEmpty.data = {$page.lastModified}
+            }
+        }
+        dc\.description < .description
+
+        # OpenGraph
+        og:type = website
+        og:site_name = {$page.brand}
+        og:url = {$page.baseUrl}
+        og:title {
+            field = og_title // seo_title // title
+            replace = 1
+            noTrimWrap = || - {$page.brand}|
+            noTrimWrap.insertData = 1
+        }
+        og:description < .description
+        og:description {
+            field = og_description // description
+            replace = 1
+        }
+        og:image {
+            cObject = FILES
+            cObject {
+                references {
+                    data = levelfield: -1, media, slide
+                }
+                maxItems = 1
+
+                renderObj = TEXT
+                renderObj {
+                    typolink {
+                        parameter {
+                            cObject = IMG_RESOURCE
+                            cObject {
+                                file {
+                                    import {
+                                        data = file:current:publicUrl
+                                        listNum = 0
+                                    }
+                                    ext = png
+                                    treatIdAsReference = 1
+                                    width = 1200
+                                    height = 630
+                                    crop.data = file:current:crop
+                                    cropVariant = social
+                                }
+                            }
+                        }
+                        returnLast = url
+                        forceAbsoluteUrl = 1
+                    }
+                }
+            }
+            attribute = property
+            replace = 1
+        }
+        og:locale = de_DE
+        og:locale.attribute = property
+        og:locale:alternate {
+            attribute = property
+            value {
+                1 = en_GB
+            }
+        }
+
+        # Twitter
+        twitter:title < .og:title
+        twitter:title {
+            field = og_title // seo_title // title
+            attribute = name
+        }
+        twitter:description < .og:description
+        twitter:description {
+            field = og_description // description
+            attribute = name
+        }
+        twitter:site = {$page.twitterCreator}
+        twitter:creator = {$page.twitterCreator}
+        twitter:image < .og:image
+        twitter:card {
+            value = summary_large_image
+            attribute = name
+            replace = 1
+        }
+
+        # Application
+        applicationName = {$page.brand}
+        appleWebAppTitle = {$page.brand}
+        msApplicationTooltip = {$page.description}
+        msApplicationStartUrl = {$page.baseUrl}
+
+        # Colors
+        themeColor = {$meta.themeColor}
+        msApplicationTileColor = {$meta.tileColor}
+        msApplicationNavButtonColor = {$meta.buttonColor}
+    }
+
+    # Standard Favicon
+    shortcutIcon = {$meta.favicon.ico}
+
+    headerData {
+
+        # Icons
+        60 = TEXT
+        60 {
+            value (
+            <link href="{$meta.favicon.svg}" rel="icon">
+            <link href="{$meta.favicon.svg}" rel="mask-icon" color="{$meta.themeColor}"/>
+            <link rel="icon" href="{$meta.favicon.ico}" type="image/x-icon" />
+            <link rel="shortcut icon" href="{$meta.favicon.ico}" type="image/x-icon" />
+
+            <link href="{$meta.favicon.png.16}" rel="icon" type="image/png" sizes="16x16" />
+            <link href="{$meta.favicon.png.32}" rel="icon" type="image/png" sizes="32x32" />
+            <link href="{$meta.favicon.png.180}" rel="apple-touch-icon" sizes="180x180" />
+            )
+            wrap = |
+            stdWrap.insertData = 1
+        }
+
+        # Manifest
+        70 = TEXT
+        70 {
+            value (
+            <link href="{$meta.manifest}" rel="manifest" crossorigin="use-credentials">
+            )
+            wrap = |
+            stdWrap.insertData = 1
+        }
+    }
+
+    includeCSS {
+        #default equals EXT:alterations/Resources/Public/StyleSheets/default.css
+    }
+
+    includeJSLibs {
+        #vendor equals EXT:alterations/Resources/Public/JavaScript/vendor/someLib.js
+    }
+
+    includeJS {
+        #default equals EXT:alterations/Resources/Public/JavaScript/default.js
+        #default.type equals text/javascript
+    }
+
+    jsInline {
+        10 = TEXT
+        10.value = document.documentElement.classList.remove("no-js");
+    }
+}
+
+[applicationContext == "Development/*"]
+    page {
+        meta {
+            robots = noindex, nofollow
+        }
+    }
+[END]

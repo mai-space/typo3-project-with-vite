@@ -1,0 +1,27 @@
+fluid {
+
+    elements {
+        layoutRootPath = EXT:alterations/Resources/Private/Layouts/ContentElements/
+        templateRootPath = EXT:alterations/Resources/Private/Templates/ContentElements/
+        partialRootPath = EXT:alterations/Resources/Private/Partials/ContentElements/
+    }
+
+    plugins {
+        layoutRootPath = EXT:alterations/Resources/Private/Layouts/Plugins/
+        templateRootPath = EXT:alterations/Resources/Private/Templates/Plugins/
+        partialRootPath = EXT:alterations/Resources/Private/Partials/Plugins/
+    }
+
+    pages {
+        layoutRootPath = EXT:alterations/Resources/Private/Layouts/Page/
+        templateRootPath = EXT:alterations/Resources/Private/Templates/Page/
+        partialRootPath = EXT:alterations/Resources/Private/Partials/Page/
+    }
+
+    backend {
+        layoutRootPath = EXT:alterations/Resources/Private/Layouts/Backend/
+        templateRootPath = EXT:alterations/Resources/Private/Templates/Backend/
+        partialRootPath = EXT:alterations/Resources/Private/Partials/Backend/
+    }
+
+}

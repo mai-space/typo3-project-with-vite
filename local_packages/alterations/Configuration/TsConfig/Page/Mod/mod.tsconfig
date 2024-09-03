@@ -1,0 +1,6 @@
+# --- BEGIN: Include Backend Layouts -----------------------------------------------------------------------------------
+
+@import 'EXT:alterations/Configuration/TsConfig/Page/Mod/WebInfo/web-info.tsconfig'
+@import 'EXT:alterations/Configuration/TsConfig/Page/Mod/WebLayout/web-layout.tsconfig'
+@import 'EXT:alterations/Configuration/TsConfig/Page/Mod/WebList/web-list.tsconfig'
+@import 'EXT:alterations/Configuration/TsConfig/Page/Mod/Wizards/wizards.tsconfig'
