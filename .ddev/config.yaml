@@ -1,5 +1,5 @@
 # Name of the Project
-name: typo3-with-vite
+name: typo3-project-with-vite
 # DDEV Options
 xdebug_enabled: false
 use_dns_when_possible: true

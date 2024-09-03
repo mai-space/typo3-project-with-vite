@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8903cf8cd7c53e4623cb1325de452221",
+    "content-hash": "b740f94edb3e0fa2a9632321aed5fbb0",
     "packages": [
         {
             "name": "b13/container",
@@ -2002,6 +2002,82 @@
                 "source": "https://github.com/lolli42/FineDiff/tree/1.1.1"
             },
             "time": "2024-07-09T14:25:40+00:00"
+        },
+        {
+            "name": "maispace/alterations",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "local_packages/alterations",
+                "reference": "98058ee6f12b2988fb4aa7808e73d76e1e7b2e05"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "alterations"
+                },
+                "branch-alias": {
+                    "dev-main": "12.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Maispace\\Alterations\\": "Classes/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Joel Maximilian Mai",
+                    "email": "joel@maispace.de",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "Client specific alterations",
+            "homepage": "https://www.maispace.de",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "maispace/base",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mai-space-de/base.git",
+                "reference": "2a49687c914d5cebc29085bfdca3b36324588d97"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mai-space-de/base/zipball/2a49687c914d5cebc29085bfdca3b36324588d97",
+                "reference": "2a49687c914d5cebc29085bfdca3b36324588d97",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "base"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Maispace\\Base\\": "Classes/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Joel Maximilian Mai",
+                    "email": "joel@maispace.de",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "Base Extension for Maispace Projects",
+            "homepage": "https://www.maispace.de",
+            "support": {
+                "source": "https://github.com/mai-space-de/base/tree/main",
+                "issues": "https://github.com/mai-space-de/base/issues"
+            },
+            "time": "2024-09-02T19:33:59+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -9918,6 +9994,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "maispace/base": 20,
+        "maispace/alterations": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,

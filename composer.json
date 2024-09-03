@@ -88,7 +88,9 @@
 		"mfc/picturecredits": "^2.2",
 		"plan2net/webp": "^5.1",
 
-		"praetorius/vite-asset-collector": "^1.11"
+		"praetorius/vite-asset-collector": "^1.11",
+		"maispace/base": "dev-main",
+		"maispace/alterations": "@dev"
 	},
 	"require-dev": {
 		"roave/security-advisories": "dev-latest"

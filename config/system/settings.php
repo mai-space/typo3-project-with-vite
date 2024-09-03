@@ -1,8 +1,8 @@
 <?php
 return [
     'BE' => [
-        'debug' => true,
-        'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=1$RUl4TGxPS29OTGRyQmg5SA$1jAT0HsUgL1CsHq6gC6mt3Ul75rqM305spa/w3KNR0E',
+        'debug' => false,
+        'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=1$b1lNV1BONE9iYkwwMm5sQw$6bV4wgLfbZdsn85sDH+M38PZ6S/JJ5qbrce86ePoLC8',
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
             'options' => [],
@@ -11,17 +11,8 @@ return [
     'DB' => [
         'Connections' => [
             'Default' => [
-                'charset' => 'utf8mb4',
-                'dbname' => 'db',
+                'charset' => 'utf8',
                 'driver' => 'mysqli',
-                'host' => 'ddev-typo3-with-vite-db',
-                'password' => 'db',
-                'port' => '3306',
-                'tableoptions' => [
-                    'charset' => 'utf8mb4',
-                    'collate' => 'utf8mb4_unicode_ci',
-                ],
-                'user' => 'db',
             ],
         ],
     ],
@@ -124,7 +115,7 @@ return [
         'cacheHash' => [
             'enforceValidation' => true,
         ],
-        'debug' => true,
+        'debug' => false,
         'disableNoCacheParameter' => true,
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
@@ -146,7 +137,7 @@ return [
                     'writerConfiguration' => [
                         'notice' => [
                             'TYPO3\CMS\Core\Log\Writer\FileWriter' => [
-                                'disabled' => false,
+                                'disabled' => true,
                             ],
                         ],
                     ],
@@ -189,19 +180,17 @@ return [
                 ],
             ],
         ],
-        'devIPmask' => '*',
-        'displayErrors' => 1,
-        'encryptionKey' => '9c8a8a4efb224ae226ff0ff18d3b27ca9aadf77da240ddf95e0c4bacc3cb1a28faf02980049936ee45087a9c4607a10a',
-        'exceptionalErrors' => 12290,
+        'devIPmask' => '',
+        'displayErrors' => 0,
+        'encryptionKey' => 'faa23be5440a9868e0dbef305c3f56fafb6632ddf782b822db90cb5da6d0f106cdf02162f0d467814db7736513a96e61',
+        'exceptionalErrors' => 4096,
         'features' => [
             'security.backend.enforceContentSecurityPolicy' => true,
             'security.usePasswordPolicyForFrontendUsers' => true,
         ],
-        'sitename' => 'typo3-with-vite',
+        'sitename' => 'typo3-project-with-vite',
         'systemMaintainers' => [
             1,
-            1,
         ],
-        'trustedHostsPattern' => '.*',
     ],
 ];

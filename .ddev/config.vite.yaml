@@ -1,8 +1,8 @@
 #ddev-generated
 additional_hostnames:
-  - vite.typo3-with-vite
+  - vite.typo3-project-with-vite
 web_environment:
-  - VITE_SERVER_URI=https://vite.typo3-with-vite.ddev.site
+  - VITE_SERVER_URI=https://vite.typo3-project-with-vite.ddev.site
   - VITE_PACKAGE_MANAGER=npm
 
 # Enable these lines if you want to expose the vite port to the host system
